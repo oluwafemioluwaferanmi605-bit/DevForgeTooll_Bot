@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: devforge-tool-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.14.3
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
